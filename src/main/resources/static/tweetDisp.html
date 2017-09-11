@@ -1,0 +1,22 @@
+<div ng-controller="tweetDisplay"    ng-init="submit()">
+    <p>My Tweets</p>
+
+    <table >
+     <br>
+
+       <div ng-repeat="roles in role|orderBy:'-tweetDate' ">
+
+<div>
+  {{roles.username}}
+</div>
+ <div>
+  {{roles.content}}
+</div>
+
+             {{roles.tweetDate |  date:'M/d/yyyy HH:mm:ss'}}
+<br> <br> <br>
+        </div>
+
+
+    </table>
+</div>

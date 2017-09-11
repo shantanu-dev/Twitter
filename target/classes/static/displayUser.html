@@ -1,0 +1,37 @@
+
+
+<div ng-controller="Display" ng-init="submit()">
+
+    <input type="text" ng-model="test">
+    <p>Roles Details Display </p>
+
+
+    <table align="left" style="width:200%;">
+
+
+        <br>
+        <tr align="left">
+
+            <th>User Name</th>
+            <th>E-Mail</th>
+            <th>Password</th>
+            <th>Bio</th>
+            <th>Gender</th>
+
+        </tr>
+<br>
+                <tr ng-repeat="roles in role | filter:test"  >
+            <td>{{roles.name}}
+
+            <td>{{roles.email}}</td>
+
+            <td>{{roles.password}}
+
+            <td>{{roles.biodetail}}</td>
+
+            <td>{{roles.gender}}</td>
+
+        </tr>
+
+    </table>
+</div>

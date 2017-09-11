@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="Controller.js"></script>
+    <style>
+        .header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:3px;
+        }
+        #nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:200px;
+            float:left;
+            padding:5px;
+        }
+
+        #aside {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:200px;
+            float:right;
+            padding:5px;
+        }
+        #fav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:100px;
+            float:right;
+            padding:5px;
+        }
+
+        #section {
+            height:1000px;
+            float:left;
+            padding:20px;
+        }
+
+        #box{
+            top: auto;
+            height:50px;
+            float:left;
+            padding:10px;
+        }
+
+        #footer {
+            bottom: auto;
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:10px;
+        }
+    </style>
+    <style>
+        input[type=submit] {
+            width: 100%;
+            background-color: #080446;
+            color: white;
+            padding: 5px 5px;
+            margin: 0 0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-app="myapp">
+
+
+    <div class="header" >
+        <h1> Twitter App </h1>
+
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="nav">
+    <h2><I>User Registration</I> </h2>
+
+    <ul class="menu-list">
+        <li><a href="#Display">Display Users</a></li>
+        <li><a href="#Tweet">Enter Tweet </a></li>
+        <li><a href="#disp">display the tweet </a></li>
+        <li><a href="#Follow">Follow Person</a></li>
+        <li><a href="#Following">Your Follows</a></li>
+        <li><a href="#Follower">Your Followers</a></li>
+    </ul>
+
+
+</div>
+
+    <div id="section" ng-view="">
+
+</div>
+
+
+</div>
+</body>
+</html>

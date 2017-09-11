@@ -1,0 +1,27 @@
+<div ng-controller="Follow"  ng-init="findusers()">
+
+    <form  >
+
+        Search Person : <form >
+        <select ng-model="following">
+
+            <option ng-repeat="x in role" value="{{x.email}}">{{x.email}}</option>
+
+
+        </select>
+
+    </form>
+
+
+        <button  ng-click="submit()">Follow</button>
+
+
+    </form>
+
+    <!--status successs-->
+    {{statusTrue}}
+    <!--status error -->
+    {{statusFalse}}
+
+
+</div>
